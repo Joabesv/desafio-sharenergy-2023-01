@@ -1,14 +1,14 @@
 version: '3.8'
 services:
-  postgres:
-    image: postgres:10.3
+  mongodb-challenge:
+    image: mongo
     restart: always
     env_file:
       - .env
     volumes:
-      - database-data:/var/lib/postgresql/data/
+      - mongodb-data:/var/lib/mongodb/data/
     ports:
-      - '5555:5432'
+      - '27017:27017'
 
 volumes:
-  database-data:
+  mongodb-data:
