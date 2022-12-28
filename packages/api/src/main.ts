@@ -29,7 +29,6 @@ app.register(fastifyTRPCPlugin, {
 (async () => {
   try {
     await app.listen({ port: 5000 });
-    app.log.info(app.printRoutes());
   } catch (err) {
     app.log.error(err);
     process.exit(1);
